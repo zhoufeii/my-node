@@ -3,7 +3,10 @@
 // console.log(__dirname);
 
 const playerAction = process.argv[process.argv.length - 1];
-console.log(playerAction);
+console.log(process.argv);
+// process 表示进程对象
+// process.env => 表示当前Node运行的环境变量
+// process.argv => 表示用户在启动node程序时输入的命令
 
 const random = Math.random() * 3;
 

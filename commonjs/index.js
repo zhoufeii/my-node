@@ -20,6 +20,9 @@ let count = 0;
 
 // const playerAction = process.argv[process.argv.length - 1];
 
+// 下方使用 process 中的 stdin.on 持续监听进程的输入，保持进程常在，
+// 在达成条件之后，使用 process.exit() 结束进程
+
 process.stdin.on('data', e => {
     const playAction = e.toString().trim();
     const result = game(playAction);
@@ -34,5 +37,5 @@ process.stdin.on('data', e => {
     console.log(result);
 })
 
-
+// 上面的监听内在使用了内置的Event模块中的 EventEmitter 这个 class
 
